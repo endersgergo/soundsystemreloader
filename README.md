@@ -8,7 +8,7 @@ For Eclipse:
 $ gradle ecplise
 ```
 
-For VS Code and IDEA just open the IDE and import this directory.
+For VS Code and IDEA just open the IDE and import the working directory.
 
 ## Build
 ```shell
