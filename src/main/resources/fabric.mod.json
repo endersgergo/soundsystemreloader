@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "soundreloader",
+  "version": "${version}",
+
+  "name": "Sound Reloader",
+  "description": "A simple mod that reloads the sound engine. Similar to suppergerrie2's Sound Engine Reloader for forge.",
+  "authors": [
+    "Ender S. Gergő"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": "https://github.com/endersgergo/soundreloader"
+  },
+
+  "license": "MIT",
+  "icon": "assets/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "hu.ender.soundreloader.SoundReloader"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+  }
+}
