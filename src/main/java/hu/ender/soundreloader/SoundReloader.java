@@ -6,7 +6,7 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.TranslatableText;
 import org.lwjgl.glfw.GLFW;
 
 public class SoundReloader implements ClientModInitializer {
@@ -20,9 +20,10 @@ public class SoundReloader implements ClientModInitializer {
 		KeyBindingHelper.registerKeyBinding(reloadKey);
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			if (reloadKey.wasPressed()) {
-				client.player.sendMessage(new LiteralText("[SoundSystem] Reloading..."), false);
+				assert client.player != null;
+				client.player.sendMessage(new TranslatableText("soundreloader.chat.msg1"), false);
 				((SoundEngineAccessor)MinecraftClient.getInstance().getSoundManager()).getSoundSystem().reloadSounds();
-				client.player.sendMessage((new LiteralText("[SoundSystem] Reloaded!")), false);
+				client.player.sendMessage((new TranslatableText("soundreloader.chat.msg2")), false);
 			}
 		});
 	}

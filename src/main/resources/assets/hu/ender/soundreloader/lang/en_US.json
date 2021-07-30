@@ -1,0 +1,6 @@
+{
+  "soundreloader.key":"Reload sound system",
+  "soundreloader.category":"Sound System Reloader",
+  "soundreloader.chat.msg1":"[SoundSystem] Reloading...",
+  "soundreloader.chat.msg2":"[SoundSystem] Reloaded!"
+}
