@@ -1,4 +1,4 @@
-# SoundReloader
+# Sound System Reloader
 A simple mod for reloading the Minecraft Sound Engine/System. Useful when multiple mods overload sound pool (eg. Charmonium and Atmosfera) or when you simply want to switch Output Devices which Minecraft does not support even after a decade.
 
 ## Setup
